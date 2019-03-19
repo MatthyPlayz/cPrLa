@@ -45,6 +45,8 @@ void command_parser(std::string x) {
 	} else if(!(x.find_first_of("$") >= 10000)) {
 		std::string substrthing = x.substr(1, x.length());
 		evalNC(substrthing);
+	} else if(!(x.find_first_of("errSE") >= 10000)) {
+		cout << "Syntax Error: defined by user" << std::endl;
 	} else {
 	    cout << "NoCommand Error: No command matching " << x << std::endl;
 	}
